@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery.repeat() demo</title>
+    <style>
+    div{float:left;width:150px;}
+    </style>
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="jquery.repeat.js"></script>
+    <script>
+    $(document).ready(function() {
+      $(".demo1").repeat({content: "<p>Hello World</p>", times: 5});
+      $(".demo2").repeat({content: "<p>Hello World</p>", times: 5, func: "prepend"});
+      $(".demo3").repeat({content: "<p>Hello World</p>", times: 5, func: "prepend"}).css("color", "red");
+    });
+    </script>
+  </head>
+
+  <body>
+    <div class="demo1"><strong>Demo content yay!</strong></div>
+    <div class="demo2"><strong>Demo content yay!</strong></div>
+    <div class="demo3"><strong>Demo content yay!</strong></div>
+  </body>
+</html>
